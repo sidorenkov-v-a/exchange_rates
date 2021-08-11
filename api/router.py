@@ -1,7 +1,7 @@
 from rest_framework.routers import Route, SimpleRouter
 
 
-class RateRouter(SimpleRouter):
+class CurrencyRouter(SimpleRouter):
     routes = [
         Route(
             url=r'^currencies/$',
@@ -11,7 +11,7 @@ class RateRouter(SimpleRouter):
             initkwargs={'suffix': 'List'}
         ),
         Route(
-            url=r'currency/{lookup}$',
+            url=r'currency/{lookup}/$',
             mapping={'get': 'retrieve'},
             name='currencies-detail',
             detail=True,

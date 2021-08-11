@@ -5,11 +5,11 @@ from drf_yasg.views import get_schema_view
 from rest_framework import permissions
 from rest_framework.authtoken.views import obtain_auth_token
 
-from .router import RateRouter
-from .views import RateViewSet
+from .router import CurrencyRouter
+from .views import CurrencyViewSet
 
-router = RateRouter()
-router.register('rates', RateViewSet)
+router = CurrencyRouter()
+router.register('currency', CurrencyViewSet)
 
 urlpatterns = [
     path('', RedirectView.as_view(pattern_name='currencies-list')),

@@ -1,9 +1,9 @@
 from rest_framework.viewsets import ReadOnlyModelViewSet
 
 from .models import Currency
-from .serializers import RateSerializer
+from .serializers import CurrencySerializer
 
 
-class RateViewSet(ReadOnlyModelViewSet):
+class CurrencyViewSet(ReadOnlyModelViewSet):
     queryset = Currency.objects.all()
-    serializer_class = RateSerializer
+    serializer_class = CurrencySerializer
