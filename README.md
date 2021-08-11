@@ -16,6 +16,22 @@ git clone https://github.com/sidorenkov-v-a/exchange_rates.git
 ```
 docker-compose up
 ```
+5) [Документация API](http://127.0.0.1/swagger/) будет доступна по адресу http://127.0.0.1/swagger/
+
+## Дополнительные возможности
+- Войдите в контейнер
+```
+docker exec -it exchange_rates_web_1 bash
+```
+- Создайте суперпользователя
+```
+python manage.py createsuperuser
+```
+- Обновите данные о курсах валют
+```
+python manage.py update_rates
+```
+
 ## Стек технологий:   
 - Django framework 3.2.6
 - Django rest framework 3.12.4
