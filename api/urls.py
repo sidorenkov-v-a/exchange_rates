@@ -1,10 +1,9 @@
 from django.urls import include, path
 from django.views.generic import RedirectView
-from rest_framework.authtoken.views import obtain_auth_token
-from drf_yasg.views import get_schema_view
 from drf_yasg import openapi
+from drf_yasg.views import get_schema_view
 from rest_framework import permissions
-
+from rest_framework.authtoken.views import obtain_auth_token
 
 from .router import RateRouter
 from .views import RateViewSet

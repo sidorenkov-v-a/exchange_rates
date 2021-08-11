@@ -4,14 +4,14 @@ from rest_framework.routers import Route, SimpleRouter
 class RateRouter(SimpleRouter):
     routes = [
         Route(
-            url='currencies',
+            url=r'^currencies/$',
             mapping={'get': 'list'},
             name='currencies-list',
             detail=False,
             initkwargs={'suffix': 'List'}
         ),
         Route(
-            url='currency/{lookup}',
+            url=r'currency/{lookup}$',
             mapping={'get': 'retrieve'},
             name='currencies-detail',
             detail=True,
