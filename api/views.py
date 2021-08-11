@@ -1,3 +1,9 @@
-from django.shortcuts import render
+from rest_framework.viewsets import ReadOnlyModelViewSet
 
-# Create your views here.
+from .models import Currency
+from .serializers import RateSerializer
+
+
+class RateViewSet(ReadOnlyModelViewSet):
+    queryset = Currency.objects.all()
+    serializer_class = RateSerializer
